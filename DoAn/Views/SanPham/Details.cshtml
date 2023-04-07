@@ -1,0 +1,127 @@
+﻿@model DoAn.Models.SanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông tin chi tiết sản phẩm</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>Mã loại: </dt>
+        <dd>@Html.DisplayFor(model => model.maloai)</dd>
+
+        <dt>
+            Tên sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tensp)
+        </dd>
+
+        <dt>
+            Hình ảnh:
+        </dt>
+
+        <dd>
+            <img src="@Html.DisplayFor(model => model.hinh)" width="300" />
+        </dd>
+
+        <dt>
+            Giá:
+        </dt>
+
+        <dd>
+            @String.Format("{0:0,0}", Model.gia)
+        </dd>
+
+        <dt>
+            Số lượng tồn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluongton)
+        </dd>
+
+        <dt>
+            CPU:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPU)
+        </dd>
+
+        <dt>
+            Dung lượng bộ nhớ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ROM)
+        </dd>
+
+        <dt>
+            RAM:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAM)
+        </dd>
+
+        <dt>
+            Dung lượng PIN:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PIN)
+        </dd>
+
+        <dt>
+            Hệ điều hành:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HDH)
+        </dd>
+
+        <dt>
+            Thẻ nhớ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thenho)
+        </dd>
+
+        <dt>
+            Camera trước:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cameratruoc)
+        </dd>
+
+        <dt>
+            Camera sau:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.camerasau)
+        </dd>
+
+        <dt>
+            Thời gian bảo hành:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaybaohanh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.masp }) |*@
+
+    @Html.ActionLink("Back to List", "PageListSP","Home")
+</p>
